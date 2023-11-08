@@ -62,8 +62,8 @@ export const PostCreate: React.FC = () => {
                             {...register("amount", {
                                 required: "This field is required",
                             })}
-                            error={!!errors.title}
-                            helperText={errors.title?.message}
+                            error={!!errors.amount}
+                            helperText={errors.amount?.message}
                             margin="normal"
                             fullWidth
                             label="amount"
@@ -107,8 +107,8 @@ export const PostCreate: React.FC = () => {
                             {...register("amount2", {
                                 required: "This field is required",
                             })}
-                            error={!!errors.title}
-                            helperText={errors.title?.message}
+                            error={!!errors.amount2}
+                            helperText={errors.amount2?.message}
                             margin="normal"
                             fullWidth
                             label="amount2"
