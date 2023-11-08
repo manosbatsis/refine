@@ -41,19 +41,36 @@ export const PostCreate: React.FC = () => {
         switch (step) {
             case 0:
                 return (
-                    <TextField
-                        id="title"
-                        {...register("title", {
-                            required: "This field is required",
-                        })}
-                        error={!!errors.title}
-                        helperText={errors.title?.message}
-                        margin="normal"
-                        fullWidth
-                        label="Title"
-                        name="title"
-                        autoFocus
-                    />
+                    <>
+
+                        <TextField
+                            id="title"
+                            {...register("title", {
+                                required: "This field is required",
+                            })}
+                            error={!!errors.title}
+                            helperText={errors.title?.message}
+                            margin="normal"
+                            fullWidth
+                            label="Title"
+                            name="title"
+                            autoFocus
+                        />
+                        <TextField
+                            id="amount"
+                            type="number"
+                            {...register("amount", {
+                                required: "This field is required",
+                            })}
+                            error={!!errors.title}
+                            helperText={errors.title?.message}
+                            margin="normal"
+                            fullWidth
+                            label="amount"
+                            name="amount"
+                            autoFocus
+                        />
+                    </>
                 );
             case 1:
                 return (
@@ -84,6 +101,20 @@ export const PostCreate: React.FC = () => {
                                 />
                             )}
                         />
+                        <TextField
+                            id="amount2"
+                            type="number"
+                            {...register("amount2", {
+                                required: "This field is required",
+                            })}
+                            error={!!errors.title}
+                            helperText={errors.title?.message}
+                            margin="normal"
+                            fullWidth
+                            label="amount2"
+                            name="amount2"
+                            autoFocus
+                        />
                         <Controller
                             control={control}
                             name="category"
@@ -108,7 +139,7 @@ export const PostCreate: React.FC = () => {
                                     isOptionEqualToValue={(option, value) =>
                                         value === undefined ||
                                         option?.id?.toString() ===
-                                            (value?.id ?? value)?.toString()
+                                        (value?.id ?? value)?.toString()
                                     }
                                     renderInput={(params) => (
                                         <TextField
@@ -131,6 +162,7 @@ export const PostCreate: React.FC = () => {
             case 2:
                 return (
                     <>
+
                         <TextField
                             id="slug"
                             {...register("slug", {

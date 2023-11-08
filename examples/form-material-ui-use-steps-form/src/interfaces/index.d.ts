@@ -12,6 +12,8 @@ export interface IPost {
     status: IStatus;
     category: ICategory;
     slug: string;
+    amount: number;
+    amount2: number;
 }
 
 export type Nullable<T> = {
